@@ -25,6 +25,9 @@ jobs:
       
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - name: Checkoup repro
+      uses: actions/checkout@v2
+          
     - name: Python Setup
       uses: actions/setup-python@v2
       with:
@@ -42,7 +45,6 @@ jobs:
           ${{ runner.os }}-
           
     - name: Python Install requirements
-      uses: actions/checkout@v2
       run: pip install -r requirements.txt
 
     - name: Generate latest feed
