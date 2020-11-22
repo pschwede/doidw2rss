@@ -43,16 +43,21 @@ def translate(feed):
                     'url': url,
                     'guid': url
                     })
-    return {'entries': entries}
+    return entries
 
 
 def main(outpath: str) -> int:
     parsed = feedparser.parse(URL_REDDIT_RSS)
     translated = translate(parsed)
     composed = Template(TEMPLATE_STRING).render( \
-            now=datetime.now(), \
-            generator=f'{PROJECT_NAME} {VERSION}', \
-            feed=translated \
+            title='Das Ohr ist der Weg',
+            link="https://reddit.com/r/DasOhrIstDerWeg",
+            description='Gekratzt von r/DasOhrIstDerWeg',
+            image=URL_CHANNEL_IMAGE,
+            generator=PROJECT_NAME,
+            version=VERSION,
+            now=translated[0]['pubDate'],
+            entries=translated \
             )
 
     if not outpath:
