@@ -12,7 +12,7 @@ python3 -mvenv env
 pip install -r requirements.txt
 ```
 
-## Get latest feed
+## Neusten feed generieren
 ```
 ./cron.sh your-feed.rss
 ```
