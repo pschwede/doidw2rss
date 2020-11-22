@@ -48,9 +48,9 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Generate latest feed
-      run: bin/doidw2rss.py .rss
+      run: bin/doidw2rss.py feed.rss
       
-    - name: data push changes
+    - name: RSS push changes
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
