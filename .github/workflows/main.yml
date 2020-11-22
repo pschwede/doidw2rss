@@ -4,6 +4,9 @@ name: RSS generation
 
 # Controls when the action will run. 
 on:
+  schedule:
+    - cron: "0 20 * * *"
+      
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
@@ -19,6 +22,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+      
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
     - name: Python Setup
       uses: actions/setup-python@v2
       with:
@@ -36,15 +42,8 @@ jobs:
           ${{ runner.os }}-
           
     - name: Python Install requirements
+      uses: actions/checkout@v2
       run: pip install -r requirements.txt
-      
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-        
-      - name: Python Install requirements
-        run: pip install -r requirements.txt
 
-      - name: Generate latest feed
-        run: bin/doidw2rss.py .rss
+    - name: Generate latest feed
+      run: bin/doidw2rss.py .rss
