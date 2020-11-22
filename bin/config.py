@@ -20,7 +20,7 @@ TEMPLATE_STRING = """<?xml version="1.0" encoding="utf-8"?>
             {% for entry in feed['entries'] %}<item>
                 <title>{{ entry['title']|e }}</title>
                 <description>{{ entry['description']|e }}</description>
-                <pubDate>{{ entry['pub_date'] }}</pubDate>
+                <pubDate>{{ entry['pubDate'] }}</pubDate>
                 <link>{{ entry['link'] }}</link>
                 <enclosure url="{{ entry['url'] }}"/>
                 <guid isPermalink="false">{{ entry['guid'] }}</guid>

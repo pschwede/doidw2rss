@@ -38,7 +38,7 @@ def translate(feed):
             entries.append({
                     'title': f'{producer.text} - {text}',
                     'description': f'{producer.text} - {text}.<br/>{footnote}',
-                    'pubDate': str(datetime.now()), # TODO date from feed entry title
+                    'pubDate': entry['updated'],
                     'link': url, # TODO proper link
                     'url': url,
                     'guid': url
