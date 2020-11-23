@@ -3,7 +3,7 @@
 [r/DasOhrIstDerWeg](https://www.reddit.com/r/DasOhrIstDerWeg) ist eine Sammlung von hörenswerten Podcastfolgen, die von [u/DieHermetischeGarage](u/DieHemetischeGarage) täglich gepflegt wird.
 Dies ist ein Reddit-Scraper, der diese Folgen in einen Podcast (RSS-feed) umwandelt.
 
-[![](https://raw.githubusercontent.com/barredo/podcasts_badges/master/badges/rss_black_en@3x.png)](https://github.com/pschwede/doidw2rss/raw/master/feed.rss)
+[![RSS](https://raw.githubusercontent.com/barredo/podcasts_badges/master/badges/feed_subscribe_white_en.png)](https://github.com/pschwede/doidw2rss/raw/master/feed.rss)
 
 ## Installation
 
