@@ -17,6 +17,7 @@ Klicke auf [den Feed](https://raw.githubusercontent.com/pschwede/doidw2rss/maste
 git clone https://github.com/pschwede/doidw2rss.git doidw2rss
 cd doidw2rss
 python3 -mvenv env
+source env/bin/activate
 pip install -r requirements.txt
 ```
 
