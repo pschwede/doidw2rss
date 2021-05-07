@@ -25,15 +25,15 @@ jobs:
       
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Checkoup repro
+    - name: Checkout repository
       uses: actions/checkout@v2
           
-    - name: Python Setup
+    - name: Python setup
       uses: actions/setup-python@v2
       with:
-        python-version: '3.7.9'
+        python-version: '3.8'
     
-    - name: Python Cached pip
+    - name: Python cached pip
       uses: actions/cache@v2
       with:
         # This path is specific to Ubuntu
@@ -44,7 +44,7 @@ jobs:
           ${{ runner.os }}-pip-
           ${{ runner.os }}-
           
-    - name: Python Install requirements
+    - name: Python install requirements
       run: pip install -r requirements.txt
 
     - name: Generate latest feed
