@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import feedparser
 from jinja2 import Template
 from datetime import datetime
