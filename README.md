@@ -7,11 +7,13 @@ Dies ist ein Reddit-Scraper, der diese Folgen in einen Podcast (RSS-feed) umwand
 
 ## Abonnieren
 
-Klicke auf [den Feed](https://raw.githubusercontent.com/pschwede/doidw2rss/master/feed.rss) um ihn mit der Standardapp zu öffnen oder füge seine URL in deine Podcastapp ein:
+Klicke auf [den Podcast-Feed](https://raw.githubusercontent.com/pschwede/doidw2rss/master/feed.rss) um ihn mit der Standardapp zu öffnen oder füge seine URL in deine Podcastapp ein:
 
 ```https://raw.githubusercontent.com/pschwede/doidw2rss/master/feed.rss```
 
-## Installation
+## Den Bot selbst betreiben
+
+Installation:
 
 ```
 git clone https://github.com/pschwede/doidw2rss.git doidw2rss
@@ -21,7 +23,8 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-## Neusten Feed aggregieren
+Den neusten Feed aggregieren:
+
 ```
 ./cron.sh feed.rss
 ```
