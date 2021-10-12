@@ -11,9 +11,9 @@ TEMPLATE_STRING = """<?xml version="1.0" encoding="utf-8"?>
         <channel>
             <title>{{ title|e }}</title>
             <link>{{ link }}</link>
-            <atom:link href="https://raw.githubusercontent.com/pschwede/doidw2rss/main/feed.rss" rel="self" type="application/rss+xml" />
+            <atom:link href="https://raw.githubusercontent.com/pschwede/doidw2rss/master/feed.rss" rel="self" type="application/rss+xml" />
             <description>{{ description|e }}</description>
-            <image><title>title</title><url>{{ image }}</url></image>
+            <image><title>title</title><url>{{ image }}</url><link>https://github.com/pschwede/doidw2rss</link></image>
             <language>{{ language|d('de-de') }}</language>
             <copyright>{{ copyright }}</copyright>
             <generator>{{ generator }} {{ version }}</generator>
