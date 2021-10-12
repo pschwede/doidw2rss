@@ -7,12 +7,13 @@ URL_CHANNEL_IMAGE = 'https://styles.redditmedia.com/t5_3a7ys/styles/communityIco
 RE_TITLE_FILTER = r'^Podcast'
 RE_FOOTNOTE = r'\([0-9]+\)$'
 TEMPLATE_STRING = """<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
         <channel>
             <title>{{ title|e }}</title>
             <link>{{ link }}</link>
+            <atom:link href="https://raw.githubusercontent.com/pschwede/doidw2rss/main/feed.rss" rel="self" type="application/rss+xml" />
             <description>{{ description|e }}</description>
-            <image>{{ image }}</image>
+            <image><title>title</title><url>{{ image }}</url></image>
             <language>{{ language|d('de-de') }}</language>
             <copyright>{{ copyright }}</copyright>
             <generator>{{ generator }} {{ version }}</generator>
@@ -20,9 +21,10 @@ TEMPLATE_STRING = """<?xml version="1.0" encoding="utf-8"?>
             {% for entry in entries %}<item>
                 <title>{{ entry['title']|e }}</title>
                 <description>{{ entry['description']|e }}</description>
-                <pubDate>{{ entry['pubDate'] }}</pubDate>
+                {% if entry['pubDate'] %}<pubDate>{{ entry['pubDate'] }}</pubDate>{% endif %}
+                {% if entry['image'] %}<itunes:image href="{ entry['image'] }/>{% endif %}
                 <link>{{ entry['link'] }}</link>
-                <enclosure url="{{ entry['url'] }}"/>
+                <enclosure type="audio/mpeg" length="1" url="{{ entry['url'] }}"/>
                 <guid isPermalink="false">{{ entry['guid'] }}</guid>
             </item>{% endfor %}
         </channel>
