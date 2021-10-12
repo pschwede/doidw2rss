@@ -5,11 +5,11 @@
             <link>https://reddit.com/r/DasOhrIstDerWeg</link>
             <atom:link href="https://raw.githubusercontent.com/pschwede/doidw2rss/master/feed.rss" rel="self" type="application/rss+xml" />
             <description>Gekratzt von r/DasOhrIstDerWeg</description>
-            <image><title>title</title><url>https://styles.redditmedia.com/t5_3a7ys/styles/communityIcon_t7esbeikey951.jpg</url><link>https://github.com/pschwede/doidw2rss</link></image>
+            <image><title>Das Ohr ist der Weg</title><url>https://styles.redditmedia.com/t5_3a7ys/styles/communityIcon_t7esbeikey951.jpg</url><link>https://github.com/pschwede/doidw2rss</link></image>
             <language>de-de</language>
             <copyright></copyright>
             <generator>doidw2rss 0.0.2</generator>
-            <lastBuildDate>Wed, 13 Oct 2021 00:28:25 +0200</lastBuildDate>
+            <lastBuildDate>Wed, 13 Oct 2021 00:30:23 +0200</lastBuildDate>
             
         </channel>
 </rss>
