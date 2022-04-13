@@ -30,7 +30,7 @@ def translate(feed):
         soup = BeautifulSoup(html.unescape(entry.content)[0]['value'], features='html.parser')
         tds = soup.select('table:nth-child(3) tr td') 
         for producer, ahref in zip(tds[0::2], tds[1::2]):
-            if len(ahref.select('a')):
+            if len(ahref.select('a')) == 0:
                 continue
             a = ahref.select('a')[0]
             text = a.text
