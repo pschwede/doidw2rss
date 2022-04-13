@@ -30,6 +30,8 @@ def translate(feed):
         soup = BeautifulSoup(html.unescape(entry.content)[0]['value'], features='html.parser')
         tds = soup.select('table:nth-child(3) tr td') 
         for producer, ahref in zip(tds[0::2], tds[1::2]):
+            if len(ahref.select('a')):
+                continue
             a = ahref.select('a')[0]
             text = a.text
             footnote = get_footnote_text(soup, ([""] + MATCHER_FOOTNOTE.findall(text))[-1])
